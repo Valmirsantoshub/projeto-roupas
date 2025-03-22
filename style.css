@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color0: #c5ebd6;
+    --color1: #83e1ad;
+    --color2: #3ddc84;
+    --color3: #2fa866;
+    --color4: #f16ac4;
+    --color5: #00ffff;
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: "Bebas Neue", sans-serif;
+}
+
+body {
+    font-family: var(--font-padrao);
+    background-color: #f4f4f9;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to bottom, var(--color4), var(--color5));
+    min-height: 150px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.logo-img img{
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+    }
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px black;
+}
+h2{
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+}
+.menu-masculino{
+    display: flex;
+}
+
+header p {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 10px auto;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* NAV */
+nav {
+    background-color: var(--color2);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+main img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}.container p{
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    
+}
+
+/* ASIDE */
+aside {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    columns: 2;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color5);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .container div {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container div {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    background-color: #f9f9f9;
+    
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 80%; */
+    cursor: pointer;
+}
+
+
+.menu-item h3 {
+    margin: 0;
+    padding: 1em;
+    font-size: 1.2em;
+     background-color: #140602;    /* #ff5722; orange*/
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-item p {
+    padding: 1em;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+.whatsapp-button .cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px; 
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+
